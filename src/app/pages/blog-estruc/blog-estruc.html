@@ -1,0 +1,145 @@
+<main class="container mx-auto mt-8">
+    <article class="flex flex-wrap justify-between">
+        <section class="w-full xl:w-full  px-4 mb-8">
+            <article class="relative ">
+                <section
+                    class="max-w-4xl lg:w-full xl:w-full mx-auto dark:text-white text-stone-950 transition-colors duration-200">
+                    <main class="rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                        <section
+                            class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg transition-colors duration-200  shadow-2xl relative top-0  p-5 sm:p-10 rounded-2xl mb-6 space-y-1.5 w-full">
+                            <header>
+                                <app-address></app-address>
+                                <h1 class=" font-bold text-5xl mb-2">
+                                    Estructura de carpetas
+                                </h1>
+
+                                <p class="dark:text-gray-100 text-xs mt-2">
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #angular
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #programacion
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #blog
+                                    </a>
+                                </p>
+
+                            </header>
+                            <markdown [data]="data"></markdown>
+                            <p class="text-xl leading-8 my-1">
+                                Explicación de los módulos principales
+                            </p>
+                            <h3 class="text-xl font-bold my-2">
+                                1. Core Module (core/)
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Singleton services (autenticación, API, interceptores HTTP, guards).
+                                    </li>
+                                    <li>
+                                        Solo debe importarse en AppModule.
+                                    </li>
+                                    <li>
+                                        Ejemplo: servicios de logging, guards, interceptores, configuración global.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                2. Shared Module (shared/)
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Componentes reutilizables, pipes, directivas, modelos.
+                                    </li>
+                                    <li>
+                                        Puede ser importado en cualquier módulo. </li>
+                                    <li>
+                                        Ejemplo: botones, tablas, componentes de UI pequeños, pipes personalizados.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                3. Features Modules (features/)
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Un módulo por cada área funcional (ej: usuarios, productos, pedidos).
+                                    </li>
+                                    <li>
+                                        Permite lazy loading y separación de responsabilidades.
+                                    </li>
+                                    <li>
+                                        Cada feature tiene subcarpetas para componentes, páginas, servicios, etc.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                4. Layout Module (layout/)
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Componentes de estructura general de la aplicación (header, sidebar, footer).
+                                    </li>
+                                    <li>
+                                        Útil para layouts dinámicos o diferentes tipos de navegación.
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                5. State Management (state/)
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Usado si implementas NgRx, NGXS, Akita, etc.
+                                    </li>
+                                    <li>
+                                        Acciones, reducers, efectos, selectores para manejar el estado global de la app.
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                6. Environments
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Variables de entorno para desarrollo, producción, etc.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="text-xl font-bold my-2">
+                                7. Styles
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Temas, variables SCSS, estilos globales.
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </main>
+                </section>
+            </article>
+        </section>
+
+    </article>
+</main>

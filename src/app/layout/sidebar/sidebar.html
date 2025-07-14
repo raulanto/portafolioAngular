@@ -1,0 +1,78 @@
+<div class="relative">
+    <div class="sticky top-0 left-0 h-screen w-64 lg:w-80 px-6 lg:px-12 py-3 border-r border-stone-400 dark:border-stone-800   transition-transform duration-300"
+        [class.hidden]="!isOpen" [class.translate-x-0]="isOpen" [class.-translate-x-full]="!isOpen">
+        <a routerLink="/portafolio" class=" text-lg font-semibold text-gray-900 dark:text-white block ">
+            Fundamentos de Angular
+        </a>
+
+        <ul class="space-y-1 text-gray-500 dark:text-gray-400  text-sm">
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLink="/portafolio" routerLinkActive="!border-red-500 !text-red-500  "
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    Introducción
+                </a>
+            </li>
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLink="/portafolio/estructura" routerLinkActive="!border-red-500 !text-red-500  ">
+                    Estructura de Proyecto
+                </a>
+            </li>
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLink="/portafolio/Componentes" routerLinkActive="!border-red-500 !text-red-500  ">
+                    Componentes
+                </a>
+            </li>
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLink="/portafolio/Templates" routerLinkActive="!border-red-500 !text-red-500  ">
+                    Templates 
+                </a>
+            </li>
+
+        </ul>
+
+
+
+
+
+        <a routerLink="/portafolio" class=" text-lg font-semibold text-gray-900 dark:text-white block ">
+            Componentes
+        </a>
+
+        <ul class="space-y-1 text-gray-500 dark:text-gray-400  text-sm">
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLinkActive="!border-red-500 !text-red-500  ">
+                    Creación, ciclo de vida, comunicación
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a routerLink="/portafolio" class=" text-lg font-semibold text-gray-900 dark:text-white block ">
+            Bloques de Codigo
+        </a>
+
+        <ul class="space-y-1 text-gray-500 dark:text-gray-400  text-sm">
+            <li>
+                <a class="block w-full px-4 py-1 rounded-r-sm border-l-2 border-transparent hover:border-red-500 hover:text-red-500 hover:bg-red-300/5"
+                    routerLink="/portafolio/BotonDark" routerLinkActive="!border-red-500 !text-red-500 !bg-red-300/5">
+                    Boton Modo Oscuro
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <button
+        class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-50 rounded-full border border-stone-400 shadow-md w-6 h-6 bg-white dark:bg-stone-900 dark:text-stone-200 dark:border-stone-800 flex justify-center items-center dark:hover:bg-stone-950 hover:bg-stone-300"
+        (click)="toggleSidebar()">
+        {{ isOpen ? '«' : '»' }}
+    </button>
+
+</div>

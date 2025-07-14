@@ -1,11 +1,12 @@
 <div class="p-5 sm:p-10 md:p-16 relative">
-    <div class="bg-cover bg-center text-center overflow-hidden" style="min-height: 400px; 
+    <div class="bg-cover bg-center text-center overflow-hidden rounded-2xl" style="min-height: 400px; 
         background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*sGP3jQBUuHSEigIksRINzw.png')"
         title="Woman holding a mug">
     </div>
     <div class="max-w-4xl mx-auto dark:text-white text-stone-950">
         <div class="mt-3  rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
-            <div class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg  relative top-0 -mt-32 p-5 sm:p-10">
+            <div
+                class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg  relative top-0 -mt-32 p-5 sm:p-10 rounded-2xl">
                 <app-address></app-address>
                 <h1 href="#" class=" font-bold text-5xl mb-2">Para desarrollar una aplicación grande y escalable</h1>
 
@@ -33,10 +34,14 @@
                 <div class="text-base leading-8 ml-12">
                     <ul class="list-disc">
                         <li>
-                            Estructura de un proyecto Angular (CLI, archivos principales)
+                            <a routerLink="/portafolio/estructura" class="hover:text-red-500 hover:">
+                                Estructura de un proyecto Angular (CLI, archivos principales)
+                            </a>
                         </li>
                         <li>
-                            Componentes (creación, ciclo de vida, comunicación)
+                            <a routerLink="/portafolio/Componentes" class="hover:text-red-500">
+                                Componentes (creación, ciclo de vida, comunicación)
+                            </a>
                         </li>
                         <li>
                             Templates y Data Binding (one-way, two-way, property, event binding)

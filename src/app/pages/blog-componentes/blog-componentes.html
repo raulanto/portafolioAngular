@@ -1,0 +1,302 @@
+<main class="container mx-auto mt-8">
+    <article class="flex flex-wrap justify-between">
+        <section class="w-full xl:w-full  px-4 mb-8">
+            <article class="relative ">
+                <section
+                    class="max-w-4xl lg:w-full xl:w-full mx-auto dark:text-white text-stone-950 transition-colors duration-200">
+                    <main class="rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                        <section
+                            class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg transition-colors duration-200  shadow-2xl relative top-0  p-5 sm:p-10 rounded-2xl mb-6 space-y-1.5 w-full">
+                            <header>
+                                <app-address></app-address>
+                                <h1 class=" font-bold text-5xl mb-2">
+                                    Componentes (creación, ciclo de vida, comunicación)
+                                </h1>
+
+                                <p class="dark:text-stone-100 text-xs mt-2">
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #angular
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #programacion
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #blog
+                                    </a>
+                                </p>
+
+                            </header>
+                            <p class="text-base leading-8 my-5">
+                                Angular 20 continúa la evolución del framework, ofreciendo mejoras en el manejo de
+                                componentes, ciclo de vida y estrategias de comunicación. En esta guía avanzada,
+                                exploramos estos conceptos en profundidad, y te comparto consejos y trucos para dominar
+                                componentes en tus aplicaciones modernas.
+                            </p>
+                            <h3 id="etr" class="text-xl font-medium mt-2">
+                                1 . Creación de Componentes en Angular 20
+                            </h3>
+                            <h3 id="etr" class="text-lg font-medium mt-2">
+                                Estructura y Decoradores
+                            </h3>
+                            <p class="text-base leading-8 my-5">
+                                En Angular, los componentes se crean usando el decorador &#64;Component. En la versión
+                                20,
+                                puedes aprovechar nuevas opciones de standalone components, control de imports y mejoras
+                                en el tipado.
+                            </p>
+                            <markdown [data]="data"></markdown>
+                            <h3 class="text-xl font-bold my-2">
+                                Consejos
+                            </h3>
+
+                            <div class="text-base leading-8 ml-12">
+                                <ul class="list-disc">
+                                    <li>
+                                        Standalone Components: Usa standalone: true para evitar declarar componentes en
+                                        módulos, facilitando lazy loading y reutilización.
+                                    </li>
+                                    <li>
+                                        Type-Safe Inputs/Outputs: Aprovecha el tipado estricto de Angular 20 para
+                                        Inputs/Outputs.
+                                    </li>
+                                    <li>
+                                        SCAM Pattern: Considera el patrón Single Component Angular Module (SCAM), aunque
+                                        con standalone la necesidad es menor.
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 id="etr" class="text-xl font-medium mt-2">
+                                1 . Creación de Componentes en Angular 20
+                            </h3>
+                            <p class="text-base leading-8 my-5">
+                                Angular provee hooks para controlar el ciclo de vida de los componentes, permitiendo
+                                ejecutar lógica en momentos clave.
+                            </p>
+                            <section>
+                                <div class="relative overflow-x-auto">
+                                    <table
+                                        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-stone-400">
+                                        <thead
+                                            class="text-xs text-stone-700 uppercase bg-stone-50 dark:bg-stone-700 dark:text-stone-400">
+                                            <tr>
+                                                <th scope="col" class="px-6 py-2">
+                                                    Hook
+                                                </th>
+                                                <th scope="col" class="px-6 py-2">
+                                                    Descripción
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngOnChanges
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Cambios en los inputs
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngOnInit
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Inicialización del componente
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngDoCheck
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Detección personalizada de cambios
+
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngAfterContentInit
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Proyección de contenido
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngAfterContentChecked
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Después de verificar el contenido
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngAfterViewInit
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Inicialización de vistas hijas
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngAfterViewChecked
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Después de comprobar vistas hijas
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-stone-800 dark:border-stone-700 border-stone-200">
+                                                <th scope="row"
+                                                    class="px-6 py-2 font-medium text-stone-900 whitespace-nowrap dark:text-white">
+                                                    ngOnDestroy
+                                                </th>
+                                                <td class="px-6 py-2">
+                                                    Limpieza antes de destruir el componente
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="text-xl font-bold my-2">
+                                    Ejemplo de Uso
+                                </h3>
+                                <markdown [data]="data2"></markdown>
+                                <h3 class="text-xl font-bold my-2">
+                                    Consejos
+                                </h3>
+
+                                <div class="text-base leading-8 ml-12">
+                                    <ul class="list-disc">
+                                        <li>
+                                            Evita Lógica Compleja en Hooks: Limita la lógica en hooks a lo necesario,
+                                            especialmente en ngOnChanges y ngDoCheck.
+                                        </li>
+                                        <li>
+                                            Observables y Limpieza: Usa el operador takeUntil o la función DestroyRef
+                                            (Angular 20) para gestionar suscripciones.
+                                        </li>
+                                        <li>
+                                            ngOnInit vs Constructor: Usa el constructor solo para inyectar dependencias,
+                                            no para inicialización lógica.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 id="etr" class="text-xl font-medium mt-2">
+                                    3. Comunicación Entre Componentes
+                                </h3>
+                                <p class="text-base leading-8 my-5">
+                                    Angular ofrece múltiples formas para la comunicación entre componentes. Elige la
+                                    estrategia según la relación entre los componentes.
+                                </p>
+                                <h3 class="text-xl font-bold my-2">
+                                    A. Inputs y Outputs
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    La forma más directa de comunicación padre-hijo.
+                                </p>
+                                <markdown [data]="data3" />
+                                <h3 class="text-xl font-bold my-2">
+                                    B. ViewChild y ContentChild
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    Permiten acceder a hijos directos en la plantilla o contenido proyectado.
+                                </p>
+                                <markdown [data]="data4" />
+                                <h3 class="text-xl font-bold my-2">
+                                    B. ViewChild y ContentChild
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    Permiten acceder a hijos directos en la plantilla o contenido proyectado.
+                                </p>
+                                <markdown [data]="data4" />
+                                <h3 class="text-xl font-bold my-2">
+                                    C. Servicios Compartidos
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    Para comunicación entre hermanos o componentes distantes, usa servicios con RxJS
+                                    Subjects o Signals.
+                                </p>
+                                <markdown [data]="data5" />
+                                <h3 class="text-xl font-bold my-2">
+                                    D. Signals (Angular 16+)
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    Signals es la nueva forma reactiva recomendada para compartir y reaccionar a cambios
+                                    de estado.
+                                </p>
+                                <markdown [data]="data6" />
+                                <h3 class="text-xl font-bold my-2">
+                                    E. Router y State Management
+
+                                </h3>
+                                <p class="text-base leading-my-5">
+                                    Para casos complejos, utiliza el Angular Router para pasar datos o integra
+                                    herramientas como NgRx, Akita, o NGXS.
+                                </p>
+                                <h3 class="text-xl font-bold my-2">
+                                    Trucos y Mejores Prácticas
+
+                                </h3>
+
+                                <div class="text-base leading-8 ml-12">
+                                    <ul class="list-disc">
+                                        <li>
+                                            Emite Objetos, No Primitivos: Al usar Outputs, emite objetos para facilitar
+                                            la extensión.
+
+                                        </li>
+                                        <li>
+                                            Unsubscribe Siempre: Usa takeUntil, DestroyRef o decoradores automáticos
+                                            para evitar memory leaks.
+                                        </li>
+                                        <li>
+                                            Signals para Estado Local: Prefiere signals para el estado interno reactivo,
+                                            sobre todo en componentes standalone.
+
+                                        </li>
+                                        <li>
+                                            Componentes Pequeños: Divide en componentes pequeños y reutilizables, y
+                                            prioriza la composición sobre la herencia.
+
+                                        </li>
+                                        <li>
+                                            Detecta Cambios Manualmente: Usa ChangeDetectorRef o el nuevo ɵmarkDirty
+                                            solo cuando sea necesario.
+
+                                        </li>
+                                        <li>
+                                            Async Pipe y OnPush: Usa el pipe async y la estrategia de detección de
+                                            cambios OnPush para máximo rendimiento.
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </section>
+                        </section>
+                    </main>
+                </section>
+            </article>
+        </section>
+
+    </article>
+</main>

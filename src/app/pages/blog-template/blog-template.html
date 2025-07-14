@@ -1,0 +1,94 @@
+<main class=" mt-8">
+    <article class="flex flex-wrap justify-between">
+        <section class="w-full xl:w-full  px-4 mb-8">
+            <article class="relative ">
+                <section
+                    class="max-w-4xl lg:w-full xl:w-full mx-auto dark:text-white text-stone-950 transition-colors duration-200">
+                    <main class="rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                        <section
+                            class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg transition-colors duration-200  shadow-2xl relative top-0  p-5 sm:p-10 rounded-2xl mb-6 space-y-1.5 w-full">
+                            <header>
+                                <app-address></app-address>
+                                <h1 class=" font-bold text-5xl mb-2">
+                                    Templates y Data Binding (one-way, two-way, property, event binding)
+                                </h1>
+
+                                <p class="dark:text-stone-100 text-xs mt-2">
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #angular
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #programacion
+                                    </a>,
+                                    <a
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #blog
+                                    </a>
+                                </p>
+
+                            </header>
+                            <h3 id="etr" class="text-xl font-medium mt-2">
+                                1. Templates en Angular
+                            </h3>
+                            <p class="text-base leading-8 my-5">
+                                Los templates en Angular son las vistas HTML de tus componentes. Puedes usar bindings
+                                para conectar los datos de tu componente TypeScript con la vista HTML y viceversa.
+                            </p>
+                            <h3 id="etr" class="text-xl font-medium mt-2">
+                                2. Data Binding en Angular
+                            </h3>
+                            <h3 id="etr" class="text-lg font-medium mt-2">
+                                A. One-way Data Binding
+                            </h3>
+                            <h3 id="etr" class="text-md font-medium mt-2">
+                                a) Property Binding
+                            </h3>
+                            <p class="text-base leading-8 my-2">
+                                Sintaxis: [property]="expression"
+                            </p>
+                            <markdown [data]="data"></markdown>
+                            <markdown [data]="data2"></markdown>
+                            <h3 id="etr" class="text-md font-medium mt-2">
+                                b) Event Binding
+                            </h3>
+                            <p class="text-base leading-8 my-2">
+                                Permite al template informar eventos al componente (de la vista a la clase).
+                            </p>
+                            <p class="text-base leading-8 my-2">
+                                Sintaxis: (event)="handler()"
+                            </p>
+                            <p class="text-base leading-8 my-2">
+                                Ejemplo:
+                            </p>
+                            <markdown [data]="data4"></markdown>
+                            <h3 id="etr" class="text-lg font-medium mt-2">
+                                B. Two-way Data Binding
+                            </h3>
+                            <p class="text-base leading-8 my-2">
+                                Permite la sincronización automática de datos entre la vista y el componente (cambios en
+                                uno afectan al otro).
+                            </p>
+                            <p class="text-base leading-8 my-2">
+                                Sintaxis: [(ngModel)]="property"
+                            </p>
+                            <markdown [data]="data5"></markdown>
+                            <markdown [data]="data6"></markdown>
+                            <h3 id="etr" class="text-lg font-medium mt-2">
+                                C. Interpolation (Interpolación)
+                            </h3>
+                            <p class="text-base leading-8 my-2">
+                                No es un binding per se, pero es la forma más directa de mostrar datos:
+                            </p>
+                                                        <p class="text-base leading-8 my-2">
+                                                               Sintaxis: &#123; &#123; expre &#125;&#125;
+                            </p>
+                        </section>
+                    </main>
+                </section>
+            </article>
+        </section>
+
+    </article>
+</main>

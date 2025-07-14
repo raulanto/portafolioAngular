@@ -1,6 +1,8 @@
 <button (click)="toggleTheme()"
   class="p-2 rounded transition-colors duration-200 bg-stone-200  dark:bg-stone-950 border dark:border-stone-800 border-stone-300"
   aria-label="Toggle dark mode">
-  <span *ngIf="isDark">🌙</span>
-  <span *ngIf="!isDark">☀️</span>
+  @if (isDark) { <span>🌙</span>}
+  @else { <span>☀️</span>}
+
+
 </button>

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import {getCurrentDate} from '../../utils/getCurrentDate';
-import { Code } from "../../components/code/code";
+
 import { Address } from "../../components/address/address";
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-index',
-  imports: [Code, Address],
+  imports: [ Address, RouterModule],
   templateUrl: './index.html',
   styleUrl: './index.css'
 })

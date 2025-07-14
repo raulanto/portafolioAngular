@@ -1,0 +1,172 @@
+<main class="container mx-auto mt-8">
+    <div class="flex flex-wrap justify-between">
+        <div class="w-full  px-4 mb-8">
+            <div class="relative ">
+                <div class="max-w-4xl mx-auto dark:text-white text-stone-950 transition-colors duration-200">
+                    <div
+                        class="  rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                        <div
+                            class="dark:bg-stone-950/80 bg-white/10 backdrop-blur-lg transition-colors duration-200 shadow-2xl relative top-0  p-5 sm:p-10 rounded-2xl mb-6 space-y-1.5">
+                            <header>
+                                <app-address></app-address>
+                                <h1 href="#" class=" font-bold text-5xl mb-2">
+                                    Boton Modo Oscuro
+                                </h1>
+
+                                <p class="dark:text-gray-100 text-xs mt-2">
+                                    <a href="#"
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #angular
+                                    </a>,
+                                    <a href="#"
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #programacion
+                                    </a>,
+                                    <a href="#"
+                                        class="text-xs text-red-600 font-medium hover: transition duration-500 ease-in-out">
+                                        #componente
+                                    </a>
+                                </p>
+
+                            </header>
+                            <p class="text-base leading-8 my-5">
+                                En este artículo, te mostraré cómo crear un componente en Angular que permite a los
+                                usuarios alternar entre el modo claro y oscuro, guardando su preferencia en el
+                                almacenamiento local del navegador.
+                            </p>
+                            <app-code class="my-5">
+                                <section class="flex justify-center items-center my-4 ">
+                                    <app-toggle></app-toggle>
+                                </section>
+                            </app-code>
+                            <h3 id="etr" class="text-xl font-medium mt-2">
+                                Estructura del Componente
+                            </h3>
+                            <p class="text-base leading-8 my-1">
+                                Explica que el componente tiene:
+                            </p>
+                            <ul class="text-base leading-8 ml-12 list-disc">
+                                <li>
+                                    Un botón para alternar el tema.
+                                </li>
+                                <li>
+                                    Lógica para detectar el tema guardado o la preferencia del sistema.
+                                </li>
+                                <li>
+                                    Persistencia de la preferencia en localStorage.
+                                </li>
+                                <li>
+                                    Aplicación de la clase dark a &lt;html&gt; para activar el modo oscuro globalmente.
+                                </li>
+                            </ul>
+                            <h3 class="text-xl font-medium">
+                                El HTML del Componente
+                            </h3>
+                            <markdown [data]="markdown" />
+                            <p class="text-base leading-8 my-1">
+                                Explicación:
+                            </p>
+                            <ul class="text-base leading-8 ml-12 list-disc ">
+                                <li>
+                                    El botón muestra un icono de luna 🌙 si está activado el modo oscuro y un sol ☀️ si
+                                    está en modo claro.
+                                </li>
+                                <li>
+                                    Usa la directiva &#64;if (Angular v17+) para renderizar condicionalmente el icono.
+                                </li>
+                                <li>
+                                    Las clases de Tailwind CSS cambian el fondo y los bordes según el modo. </li>
+                            </ul>
+                            <h3 class="text-xl font-medium">
+                                El Código TypeScript
+                            </h3>
+                            <p class="text-base leading-8 my-1">
+                                Incluye el código de la clase y explica su funcionamiento por secciones:
+                            </p>
+                            <markdown [data]="data" />
+                            <p class="text-base leading-8 my-1">
+                                Explicación:
+                            </p>
+                            <ul class="text-base leading-8 ml-12 list-disc">
+                                <li>
+                                    <span class="font-bold"> Propiedad isDark:</span> Lleva el estado del tema actual.
+                                </li>
+                                <li>
+                                    <span class="font-bold">
+                                        Constructor:
+                                    </span>
+                                    <ul class="text-base leading-8 ml-12 list-disc">
+                                        <li>
+                                            Comprueba si hay un valor guardado en localStorage y lo aplica.
+                                        </li>
+                                        <li>
+                                            Si no hay valor, detecta la preferencia del sistema (prefers-color-scheme:
+                                            dark).
+                                        </li>
+                                        <li>
+                                            Llama a updateTheme para aplicar la clase correspondiente.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-bold">
+                                        toggleTheme():
+                                    </span>
+                                    <ul class="text-base leading-8 ml-12 list-disc">
+                                        <li>
+                                            Cambia el valor de isDark.
+                                        </li>
+                                        <li>
+                                            Actualiza el DOM y guarda la preferencia en localStorage.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="font-bold">
+                                        updateTheme():
+                                    </span>
+                                    <ul class="text-base leading-8 ml-12 list-disc">
+                                        <li>
+                                            Añade o remueve la clase dark del &lt;html&gt;, lo que activa los estilos
+                                            oscuros si usas Tailwind (o tu propio CSS).
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3 class="text-xl font-medium">
+                                Integración en la Aplicación
+                            </h3>
+                            <p class="text-base leading-8 my-1">
+                                Explica cómo usar el componente en otra parte de tu app, por ejemplo en
+                                app.component.html:
+                            </p>
+                            <markdown [data]="data2" />
+                            <h3 class="text-xl font-medium">
+                                Notas Adicionales
+                            </h3>
+                            <ul class="text-base leading-8 ml-12 list-disc">
+                                <li>
+                                    Si usas Tailwind CSS, asegúrate de que tu configuración tenga activado el modo JIT y
+                                    el dark mode en modo class.
+
+                                </li>
+                                <li>
+                                    Puedes mejorar el componente añadiendo animaciones, accesibilidad, o pruebas
+                                    unitarias.
+                                </li>
+                            </ul>
+                            <h3 class="text-xl font-medium">
+                                Conclusión
+                            </h3>
+                            <p class="text-base leading-8 my-1">
+                                Resalta la importancia de respetar la preferencia del usuario y cómo una buena
+                                experiencia oscura/clara puede mejorar la usabilidad de tu web.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</main>
