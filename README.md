@@ -7,7 +7,7 @@
 </p>
 
 
-Para desarrollar una aplicación grande y escalable
+
 
 Para desarrollar una aplicación grande y escalable en Angular, es fundamental dominar una variedad de conceptos que abarcan desde los fundamentos del framework hasta prácticas avanzadas de arquitectura y optimización. Aquí tienes una lista exhaustiva de los conceptos clave que deberías aprender:
 
