@@ -1,4 +1,12 @@
 # PortafolioAngular
+Copilot said: Para desarrollar una aplicación grande y escalable
+
+Para desarrollar una aplicación grande y escalable en Angular, es fundamental dominar una variedad de conceptos que abarcan desde los fundamentos del framework hasta prácticas avanzadas de arquitectura y optimización. Aquí tienes una lista exhaustiva de los conceptos clave que deberías aprender:
+
+este proyecto es confin para recopilar el avanze al aprender angular
+
+puedes ver el portafolio [aqui](https://portafolio-angular-y7o3.vercel.app/home)
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
 
